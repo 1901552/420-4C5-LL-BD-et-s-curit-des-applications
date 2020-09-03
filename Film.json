@@ -21,22 +21,22 @@
             ]
         },
         {
-            "Titre": "Les Minions",
-            "directeur": "Kyle Balda, Pierre Coffin",
-            "Auteur": "Brian Lynch,",
-            "Date": 2015,
+            "Titre": "Fight Club",
+            "directeur": "David Fincher",
+            "Auteur": "Chuck Palahniuk, Jim Uhls",
+            "Date": 1995,
             "Vedette": [
                 {
-                "Nom": "Sandra Bullock",
-                "Personnage": "Scarlet Overkill (voix)"
+                "Nom": "Brad Pitt",
+                "Personnage": "Tyler Durden"
                 },
                 {
-                "Nom": "Jon Hamm",
-                "Personnage": "Herb Overkill  (voix)"
+                "Nom": "Edward Norton",
+                "Personnage": "Narrator"
                 },
                 {
-                "Nom": "Michael Keaton",
-                "Personnage": "Walter Nelson (voix)"
+                "Nom": "Meat Loaf",
+                "Personnage": "Robert Paulsen"
                 }
             ]
         }
