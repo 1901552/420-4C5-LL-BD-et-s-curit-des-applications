@@ -1,6 +1,3 @@
-const header = document.querySelector('header');
-const section = document.querySelector('section');
-
 let requestURL = 'https://raw.githubusercontent.com/1901552/420-4C5-LL-BD-et-s-curit-des-applications/master/Film.json';
 
 request = new XMLHttpRequest();
@@ -22,6 +19,8 @@ function ConstruireEntete(jsonObj) {
     const Films = jsonObj['Films'];
     
     for (var i = 0; i < Films.length; i++) {
+        var header = document.getElementsByTagName('HEADER')[i];
+
         const myH1 = document.createElement('h1');  // Créer un entête élément de type h1m(l'élément est créé mais non associer a notre page pour le moment)
         myH1.textContent = Films[i].Titre;    // Utiliser la valeur de la propriété JSON 'Titre' retourné par le serveur pour initialiser le texte de notre entête h1
         header.appendChild(myH1);             // Assigner(associer) notre entête à l'entête de notre page HTML
@@ -42,6 +41,7 @@ function AfficherAuteur(jsonObj) {
     const Films = jsonObj['Films'];
 
     for (var j = 0; j < Films.length; j++) {
+        var section = document.getElementsByTagName('SECTION')[j];
 
         const Vedette = Films[j].Vedette; //Emmagasiner la valeur de la propriété JSON 'Vedette' dans la varaible tableau heroes 
         
@@ -61,6 +61,9 @@ function AfficherAuteur(jsonObj) {
             myArticle.appendChild(myH2);
             myArticle.appendChild(myPara1);
             section.appendChild(myArticle); // Associer notre article a notre section de la page HTML
+            
         }
+        const aricle = document.createElement('article');
+        const
     }
 }

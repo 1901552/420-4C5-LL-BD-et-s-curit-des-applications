@@ -5,17 +5,21 @@
             "directeur": "Kyle Balda, Pierre Coffin",
             "Auteur": "Brian Lynch,",
             "Date": 2015,
+            "Description": " Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world. ",
             "Vedette": [
             {
                 "Nom": "Sandra Bullock",
+                "age": "56",
                 "Personnage": "Scarlet Overkill (voix)"
             },
             {
                 "Nom": "Jon Hamm",
+                "age": "49",
                 "Personnage": "Herb Overkill  (voix)"
             },
             {
                 "Nom": "Michael Keaton",
+                "age": "61",
                 "Personnage": "Walter Nelson (voix)"
             }
             ]
@@ -25,17 +29,21 @@
             "directeur": "David Fincher",
             "Auteur": "Chuck Palahniuk, Jim Uhls",
             "Date": 1995,
+            "Description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
             "Vedette": [
                 {
                 "Nom": "Brad Pitt",
+                "age": "63",
                 "Personnage": "Tyler Durden"
                 },
                 {
                 "Nom": "Edward Norton",
+                "age": "51",
                 "Personnage": "Narrator"
                 },
                 {
                 "Nom": "Meat Loaf",
+                "age": "73",
                 "Personnage": "Robert Paulsen"
                 }
             ]

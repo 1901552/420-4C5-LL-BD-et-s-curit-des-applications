@@ -10,6 +10,7 @@ header p {
 section {
     width: 760px;
     margin: auto;
+    margin-bottom: 100px;
     display: flex;
 }
 article {
