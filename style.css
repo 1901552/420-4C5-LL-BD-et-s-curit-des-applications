@@ -1,0 +1,29 @@
+header {
+    text-align: center;
+}
+
+header p {
+    font-weight: bold;
+    font-size: large;
+}
+
+section {
+    width: 760px;
+    margin: auto;
+    display: flex;
+}
+article {
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h1, h2 {
+    font-family: 'Faster One', cursive;
+}
