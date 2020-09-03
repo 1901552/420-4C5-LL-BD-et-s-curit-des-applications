@@ -64,6 +64,5 @@ function AfficherAuteur(jsonObj) {
             
         }
         const aricle = document.createElement('article');
-        const
     }
 }
