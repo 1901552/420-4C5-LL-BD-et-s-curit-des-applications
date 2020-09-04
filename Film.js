@@ -10,6 +10,7 @@ request.onload= MaFonctionCallBack;
 function MaFonctionCallBack(){
     const Film = this.response;     // emmagasiner les données JSON dans une variable. La réponse est envoyée  this 
     ConstruireEntete(Film);            // Appel de la fonction qui va créer un entête et un paragraphe html
+    afficheBoxOffice(Film);
     AfficherAuteur(Film);              // Appel de la fonction qui vas récupérer les éléments du tableau Vedette pour remplir notre page html
 }
 
@@ -44,14 +45,51 @@ function ConstruireEntete(jsonObj) {
         topdiv.appendChild(myH1);             // Assigner(associer) notre entête à l'entête de notre page HTML
     
         const myPara1 = document.createElement('p'); // Créer un élément de type paragraphe
-        myPara1.textContent=  'Directeur: ' + Films[i].directeur + ' // Auteur: ' + Films[i].Auteur; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
+        myPara1.textContent =  'Directeur: ' + Films[i].directeur + ' // Auteur: ' + Films[i].Auteur; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
         topdiv.appendChild(myPara1);
     
         const myPara2 = document.createElement('p'); // Créer un autre paragraphe pour la date
-        myPara2.textContent=  'Date: ' + Films[i].Date; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
+        myPara2.textContent =  'Date: ' + Films[i].Date; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
         topdiv.appendChild(myPara2);
+
+        const mypara3 = document.createElement('p');
+        mypara3.textContent = 'Description: ' + Films[i].Description;
+        topdiv.appendChild(mypara3);
     }
 }
+
+function afficheBoxOffice(jsonObj) {
+    const Films = jsonObj['Films'];
+
+    for (var j = 0; j < Films.length; j++) {
+
+        var topdiv = document.getElementById('section' + j).firstChild;
+        const BoxOffice = Films[j].BoxOffice;
+        
+        for (var i = 0; i < BoxOffice.length; i++) {
+            const h2 = document.createElement('h2');
+            h2.textContent = 'BoxOffice';
+            topdiv.appendChild(h2);
+
+            const para1 = document.createElement('p');
+            para1.textContent =  'Budget: ' + BoxOffice.Budget;
+            topdiv.appendChild(para1);
+
+            const para2 = document.createElement('p');
+            para2.textContent += "Fin de semaine d'ouverture: " + BoxOffice.FdsOuverture;
+            topdiv.appendChild(para2);
+            
+            const para3 = document.createElement('p');
+            para3.textContent += 'Total au états-Unis: ' + BoxOffice.TotalUSA;
+            topdiv.appendChild(para3);
+
+            const para4 = document.createElement('p');
+            para4.textContent += 'Total international: ' + BoxOffice.TotalMonde;
+            topdiv.appendChild(para4);
+        }
+    }
+}
+
 
 // Fonction pour afficher les informations sur le film
 
@@ -72,14 +110,17 @@ function AfficherAuteur(jsonObj) {
             const Nom = document.createElement('article'); 
             const myH2 = document.createElement('h2');
             const myPara1 = document.createElement('p');
+            const myPara2 = document.createElement('p');
             
             myH2.textContent = Vedette[i].Nom; // Utiliser la valeur de la propriété JSON 'Nom' retourné par le serveur pour initialiser le texte de notre entête h2
-            myPara1.textContent = 'Personnage: ' + Vedette[i].Personnage; // Utiliser la valeur de la propriété JSON 'Personnage' retourné par le serveur pour initialiser le paragraphe
-            
+            myPara1.textContent = 'Age: ' + Vedette[i].age;
+            myPara2.textContent = 'Personnage: ' + Vedette[i].Personnage; // Utiliser la valeur de la propriété JSON 'Personnage' retourné par le serveur pour initialiser le paragraphe
+
             // Assigner(associer) l'entête myH2 et le paragraphes myPara1 à l'article myArticle
             
             myArticle.appendChild(myH2);
             myArticle.appendChild(myPara1);
+            myArticle.appendChild(myPara2);
             downdiv.appendChild(myArticle); // Associer notre article a notre section de la page HTML
             
         }

@@ -39,6 +39,7 @@
             "Auteur": "Chuck Palahniuk, Jim Uhls",
             "Date": 1995,
             "Description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+            
             "BoxOffice": [
                 {
                     "Budget": "63 000 000$",
@@ -74,10 +75,10 @@
             "Description": "A lawyer becomes targeted by a corrupt politician and his N.S.A. goons when he accidentally receives key evidence to a politically motivated crime.",
             "BoxOffice": [
                 {
-                    "Budget": "63 000 000$",
-                    "FdsOuverture": "11 035 485$",
-                    "TotalUSA": "37 030 102$",
-                    "TotalMonde": "101 218 804$"
+                    "Budget": "90 000 000$",
+                    "FdsOuverture": "20 038 573$",
+                    "TotalUSA": "111 549 836$",
+                    "TotalMonde": "250 849 789$"
                 }
             ],
             "Vedette": [
