@@ -64,29 +64,29 @@ function afficheBoxOffice(jsonObj) {
     for (var j = 0; j < Films.length; j++) {
 
         var topdiv = document.getElementById('section' + j).firstChild;
-        const BoxOffice = Films[j].BoxOffice;
+        const BoxOffice = Films[j].BoxOffice[0];
         
-        for (var i = 0; i < BoxOffice.length; i++) {
-            const h2 = document.createElement('h2');
-            h2.textContent = 'BoxOffice';
-            topdiv.appendChild(h2);
 
-            const para1 = document.createElement('p');
-            para1.textContent =  'Budget: ' + BoxOffice.Budget;
-            topdiv.appendChild(para1);
+        const h2 = document.createElement('h2');
+        h2.textContent = 'BoxOffice';
+        topdiv.appendChild(h2);
 
-            const para2 = document.createElement('p');
-            para2.textContent += "Fin de semaine d'ouverture: " + BoxOffice.FdsOuverture;
-            topdiv.appendChild(para2);
-            
-            const para3 = document.createElement('p');
-            para3.textContent += 'Total au états-Unis: ' + BoxOffice.TotalUSA;
-            topdiv.appendChild(para3);
+        const para1 = document.createElement('p');
+        para1.textContent =  'Budget: ' + BoxOffice.Budget;
+        topdiv.appendChild(para1);
 
-            const para4 = document.createElement('p');
-            para4.textContent += 'Total international: ' + BoxOffice.TotalMonde;
-            topdiv.appendChild(para4);
-        }
+        const para2 = document.createElement('p');
+        para2.textContent += "Fin de semaine d'ouverture: " + BoxOffice.FdsOuverture;
+        topdiv.appendChild(para2);
+        
+        const para3 = document.createElement('p');
+        para3.textContent += 'Total au états-Unis: ' + BoxOffice.TotalUSA;
+        topdiv.appendChild(para3);
+
+        const para4 = document.createElement('p');
+        para4.textContent += 'Total international: ' + BoxOffice.TotalMonde;
+        topdiv.appendChild(para4);
+
     }
 }
 
