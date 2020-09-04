@@ -1,18 +1,19 @@
-header {
+.topdiv {
     text-align: center;
 }
 
-header p {
+.topdiv p {
     font-weight: bold;
     font-size: large;
 }
 
-section {
+.downdiv {
     width: 760px;
     margin: auto;
     margin-bottom: 100px;
     display: flex;
 }
+
 article {
     margin: auto;
 }

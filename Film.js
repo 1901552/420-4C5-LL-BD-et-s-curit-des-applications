@@ -19,19 +19,37 @@ function ConstruireEntete(jsonObj) {
     const Films = jsonObj['Films'];
     
     for (var i = 0; i < Films.length; i++) {
-        var header = document.getElementsByTagName('HEADER')[i];
+        var section = document.createElement('section');
+        section.id = 'section' + i;
+        document.body.appendChild(section);
+
+        for (var j = 0; j < 2; j++){
+            var div = document.createElement('div');
+
+            if (j == 0) {
+                div.className = 'topdiv';
+            } else {
+                div.className = 'downdiv';
+            }
+
+            document.getElementById('section' + i).appendChild(div)
+        }
+
+        var topdiv = document.getElementById('section' + i).firstChild;
+
+        // var header = document.getElementsByTagName('HEADER')[i];
 
         const myH1 = document.createElement('h1');  // Créer un entête élément de type h1m(l'élément est créé mais non associer a notre page pour le moment)
         myH1.textContent = Films[i].Titre;    // Utiliser la valeur de la propriété JSON 'Titre' retourné par le serveur pour initialiser le texte de notre entête h1
-        header.appendChild(myH1);             // Assigner(associer) notre entête à l'entête de notre page HTML
+        topdiv.appendChild(myH1);             // Assigner(associer) notre entête à l'entête de notre page HTML
     
         const myPara1 = document.createElement('p'); // Créer un élément de type paragraphe
         myPara1.textContent=  'Directeur: ' + Films[i].directeur + ' // Auteur: ' + Films[i].Auteur; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
-        header.appendChild(myPara1);
+        topdiv.appendChild(myPara1);
     
         const myPara2 = document.createElement('p'); // Créer un autre paragraphe pour la date
         myPara2.textContent=  'Date: ' + Films[i].Date; // Utiliser la valeur de la propriété JSON 'Directeur' et 'Auteur' retourné par le serveur pour initialiser le texte du paragraphe
-        header.appendChild(myPara2);
+        topdiv.appendChild(myPara2);
     }
 }
 
@@ -41,7 +59,9 @@ function AfficherAuteur(jsonObj) {
     const Films = jsonObj['Films'];
 
     for (var j = 0; j < Films.length; j++) {
-        var section = document.getElementsByTagName('SECTION')[j];
+        // var section = document.getElementsByTagName('SECTION')[j];
+
+        var downdiv = document.getElementById('section' + j).lastChild;
 
         const Vedette = Films[j].Vedette; //Emmagasiner la valeur de la propriété JSON 'Vedette' dans la varaible tableau heroes 
         
@@ -60,9 +80,8 @@ function AfficherAuteur(jsonObj) {
             
             myArticle.appendChild(myH2);
             myArticle.appendChild(myPara1);
-            section.appendChild(myArticle); // Associer notre article a notre section de la page HTML
+            downdiv.appendChild(myArticle); // Associer notre article a notre section de la page HTML
             
         }
-        const aricle = document.createElement('article');
     }
 }
